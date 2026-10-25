@@ -1,10 +1,16 @@
-# ARKANA
+# ARKANA — Menu inicial
 
-Projeto Godot 4.x para Android, em modo horizontal (1280 × 720).
+Projeto para Godot 4.x, Android horizontal (1280 × 720).
 
-## Primeira tela
-Uma tela inicial com a arte roxa e moldura dourada no fundo, sem botões ou outros elementos.
+A tela inicial contém o fundo roxo/dourado e dois **TextureButton** independentes, centralizados: **SOLO** e **MULTIPLAYER**. Os eventos de clique estão separados. As partidas ainda não estão implementadas.
 
-**Atenção:** o PNG `assets/background/menu_background.png` ainda precisa ser adicionado ao repositório. O projeto completo, com a imagem, está no ZIP fornecido na conversa. Para usar o checkout do GitHub, copie a imagem do ZIP para esse caminho.
+## Imagens pendentes no GitHub
+Os PNGs ainda precisam ser enviados ao repositório:
+- `assets/background/menu_background.png`
+- `assets/buttons/solo.png`
+- `assets/buttons/multiplayer.png`
 
-Importe o `project.godot` na Godot 4.x.
+O ZIP completo, com as três imagens, está disponível na conversa do projeto.
+
+## Importar
+Abra a Godot 4.x e importe `project.godot`.
