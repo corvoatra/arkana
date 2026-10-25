@@ -1,16 +1,19 @@
-# ARKANA — Menu inicial
+# ARKANA — Menu responsivo
 
-Projeto para Godot 4.x, Android horizontal (1280 × 720).
+Projeto Godot 4.x horizontal (1280 × 720) com dois botões separados: SOLO e MULTIPLAYER.
 
-A tela inicial contém o fundo roxo/dourado e dois **TextureButton** independentes, centralizados: **SOLO** e **MULTIPLAYER**. Os eventos de clique estão separados. As partidas ainda não estão implementadas.
+## Adaptação de telas
+- Stretch Mode: `canvas_items`
+- Stretch Aspect: `keep`
+- Preserva as proporções da moldura e dos botões, sem cortes ou distorções.
+- Telas fora da proporção 16:9 terão barras em tom roxo.
+- Os botões são centralizados usando `CenterContainer` e recebem máscaras de clique pela transparência.
 
-## Imagens pendentes no GitHub
-Os PNGs ainda precisam ser enviados ao repositório:
+## Imagens necessárias
+Os PNGs **ainda precisam ser enviados ao repositório**:
 - `assets/background/menu_background.png`
 - `assets/buttons/solo.png`
 - `assets/buttons/multiplayer.png`
 
-O ZIP completo, com as três imagens, está disponível na conversa do projeto.
-
-## Importar
-Abra a Godot 4.x e importe `project.godot`.
+O ZIP completo com imagens está na conversa.
+Teste em aparelho real, especialmente modelos com recortes de câmera e diferentes proporções.
