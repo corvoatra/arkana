@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/background/menu_background.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/buttons/solo.png" id="2_solo"]
+[ext_resource type="Texture2D" path="res://assets/buttons/multiplayer.png" id="3_multi"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="4_script"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_script")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,3 +25,36 @@ mouse_filter = 2
 texture = ExtResource("1_bg")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="ButtonCenter" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Buttons" type="HBoxContainer" parent="ButtonCenter"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="SoloButton" type="TextureButton" parent="ButtonCenter/Buttons"]
+custom_minimum_size = Vector2(295, 415)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_solo")
+texture_hover = ExtResource("2_solo")
+texture_pressed = ExtResource("2_solo")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MultiplayerButton" type="TextureButton" parent="ButtonCenter/Buttons"]
+custom_minimum_size = Vector2(295, 415)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_multi")
+texture_hover = ExtResource("3_multi")
+texture_pressed = ExtResource("3_multi")
+ignore_texture_size = true
+stretch_mode = 5
